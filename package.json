@@ -3,7 +3,7 @@
   "version": "0.1.0-alpha",
   "description": "Free and open-source admin application made with React",
   "author": "Manoj",
-  "homepage": "https://manoj-bs.github.io/react_dashboard",
+  "homepage": "https://manoj-bs.github.io",
   "license": "MIT",
   "dependencies": {
     "@emotion/react": "^11.1.5",
