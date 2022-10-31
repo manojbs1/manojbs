@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "actor": "You",
+    "code": "eventAdded",
+    "createdAt": 1667192090000,
+    "params": {
+      "resource": "React Summit"
+    }
+  },
+  {
+    "id": "2",
+    "actor": "Manoj BS",
+    "code": "eventUpdated",
+    "createdAt": 1667192090000,
+    "params": {
+      "resource": "React Summit"
+    }
+  },
+  {
+    "id": "3",
+    "actor": "Manoj BS",
+    "code": "userDeleted",
+    "createdAt": 1667192090000,
+    "params": {
+      "resource": "Manoj BS"
+    }
+  },
+  {
+    "id": "4",
+    "actor": "Manoj BS",
+    "code": "userUpdated",
+    "createdAt": 1667192090000,
+    "params": {
+      "resource": "Manoj BS"
+    }
+  },
+  {
+    "id": "5",
+    "actor": "Manoj BS",
+    "code": "userAdded",
+    "createdAt": 1667192090000,
+    "params": {
+      "resource": "Manoj BS"
+    }
+  }
+]
