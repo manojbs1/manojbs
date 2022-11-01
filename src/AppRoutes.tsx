@@ -13,7 +13,13 @@ const ProfileInformation = lazy(
 const ProfilePassword = lazy(() => import("./admin/pages/ProfilePassword"));
 
 // Auth
+const ForgotPassword = lazy(() => import("./auth/pages/ForgotPassword"));
+const ForgotPasswordSubmit = lazy(
+  () => import("./auth/pages/ForgotPasswordSubmit")
+);
 const Login = lazy(() => import("./auth/pages/Login"));
+const Register = lazy(() => import("./auth/pages/Register"));
+
 
 // Core
 const Forbidden = lazy(() => import("./core/pages/Forbidden"));
@@ -22,15 +28,18 @@ const UnderConstructions = lazy(
   () => import("./core/pages/UnderConstructions")
 );
 
-
-// Users
-const UserManagement = lazy(() => import("./users/pages/UserManagement"));
-
+const under_construction_page = <Navigate to={`/${process.env.PUBLIC_URL}/under-construction`} replace />
 const AppRoutes = () => {
+
   return (
     <Routes basename={process.env.PUBLIC_URL}>
+      {/* <Route path="/" element={<Landing />} /> */}
       <PrivateRoute path="admin" element={<Admin />}>
         <PrivateRoute path="/" element={<Home />} />
+        <PrivateRoute path="calendar" element={under_construction_page} />
+        <PrivateRoute path="dashboard" element={under_construction_page} />
+        <PrivateRoute path="faq" element={under_construction_page} />
+        <PrivateRoute path="help" element={ under_construction_page } />
         <PrivateRoute path="profile" element={<Profile />}>
           <PrivateRoute path="/" element={<ProfileActivity />} />
           <PrivateRoute path="information" element={<ProfileInformation />} />
@@ -45,15 +54,18 @@ const AppRoutes = () => {
             />
           }
         />
-        <PrivateRoute path="user-management" element={<UserManagement />} />
+        <PrivateRoute path="user-management" element={under_construction_page} />
       </PrivateRoute>
+      <Route path="forgot-password" element={<ForgotPassword />} />
+      <Route path="forgot-password-submit" element={<ForgotPasswordSubmit />} />
       <Route path="login" element={<Login />} />
+      <Route path="register" element={<Register />} />
       <Route path="under-construction" element={<UnderConstructions />} />
       <Route path="403" element={<Forbidden />} />
       <Route path="404" element={<NotFound />} />
       <Route
         path="*"
-        element={<Navigate to={`/${process.env.PUBLIC_URL}/admin`} replace />}
+        element={<Navigate to={`/${process.env.PUBLIC_URL}/404`} replace />}
       />
     </Routes>
   );
