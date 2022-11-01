@@ -5,7 +5,7 @@
     "code": "eventAdded",
     "createdAt": 1667192090000,
     "params": {
-      "resource": "React Summit"
+      "resource": "Development In-Progress"
     }
   },
   {
@@ -14,34 +14,34 @@
     "code": "eventUpdated",
     "createdAt": 1667192090000,
     "params": {
-      "resource": "React Summit"
+      "resource": "Development In-Progress"
     }
   },
   {
     "id": "3",
     "actor": "Manoj BS",
-    "code": "userDeleted",
+    "code": "eventUpdated",
     "createdAt": 1667192090000,
     "params": {
-      "resource": "Manoj BS"
+      "resource": "Development In-Progress"
     }
   },
   {
     "id": "4",
     "actor": "Manoj BS",
-    "code": "userUpdated",
+    "code": "eventUpdated",
     "createdAt": 1667192090000,
     "params": {
-      "resource": "Manoj BS"
+      "resource": "Development In-Progress"
     }
   },
   {
     "id": "5",
     "actor": "Manoj BS",
-    "code": "userAdded",
+    "code": "eventUpdated",
     "createdAt": 1667192090000,
     "params": {
-      "resource": "Manoj BS"
+      "resource": "Development In-Progress"
     }
   }
 ]
