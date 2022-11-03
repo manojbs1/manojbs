@@ -4,6 +4,9 @@ import PrivateRoute from "./core/components/PrivateRoute";
 
 // Admin
 const Admin = lazy(() => import("./admin/pages/Admin"));
+const Dashboard = lazy(() => import("./admin/pages/Dashboard"));
+const Faq = lazy(() => import("./admin/pages/Faq"));
+const HelpCenter = lazy(() => import("./admin/pages/HelpCenter"));
 const Home = lazy(() => import("./admin/pages/Home"));
 const Profile = lazy(() => import("./admin/pages/Profile"));
 const ProfileActivity = lazy(() => import("./admin/pages/ProfileActivity"));
@@ -20,6 +23,8 @@ const ForgotPasswordSubmit = lazy(
 const Login = lazy(() => import("./auth/pages/Login"));
 const Register = lazy(() => import("./auth/pages/Register"));
 
+// Calendar
+const CalendarApp = lazy(() => import("./calendar/pages/CalendarApp"));
 
 // Core
 const Forbidden = lazy(() => import("./core/pages/Forbidden"));
@@ -28,18 +33,22 @@ const UnderConstructions = lazy(
   () => import("./core/pages/UnderConstructions")
 );
 
-const under_construction_page = <Navigate to={`/${process.env.PUBLIC_URL}/under-construction`} replace />
-const AppRoutes = () => {
+// Landing
+const Landing = lazy(() => import("./landing/pages/Landing"));
 
+// Users
+const UserManagement = lazy(() => import("./users/pages/UserManagement"));
+
+const AppRoutes = () => {
   return (
     <Routes basename={process.env.PUBLIC_URL}>
-      {/* <Route path="/" element={<Landing />} /> */}
+      <Route path="/" element={<Landing />} />
       <PrivateRoute path="admin" element={<Admin />}>
         <PrivateRoute path="/" element={<Home />} />
-        <PrivateRoute path="calendar" element={under_construction_page} />
-        <PrivateRoute path="dashboard" element={under_construction_page} />
-        <PrivateRoute path="faq" element={under_construction_page} />
-        <PrivateRoute path="help" element={ under_construction_page } />
+        <PrivateRoute path="calendar" element={<CalendarApp />} />
+        <PrivateRoute path="dashboard" element={<Dashboard />} />
+        <PrivateRoute path="faq" element={<Faq />} />
+        <PrivateRoute path="help" element={<HelpCenter />} />
         <PrivateRoute path="profile" element={<Profile />}>
           <PrivateRoute path="/" element={<ProfileActivity />} />
           <PrivateRoute path="information" element={<ProfileInformation />} />
@@ -54,7 +63,7 @@ const AppRoutes = () => {
             />
           }
         />
-        <PrivateRoute path="user-management" element={under_construction_page} />
+        <PrivateRoute path="user-management" element={<UserManagement />} />
       </PrivateRoute>
       <Route path="forgot-password" element={<ForgotPassword />} />
       <Route path="forgot-password-submit" element={<ForgotPasswordSubmit />} />
