@@ -21,11 +21,11 @@ const Home = () => {
       <Grid container spacing={2}>
         <Grid item xs={12} md={6} lg={4}>
           <WelcomeWidget />
-          <AchievementWidget />
+          {/* <AchievementWidget /> */}
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
           <FollowersWidget />
-          <ViewsWidget />
+          {/* <ViewsWidget /> */}
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
           <PersonalTargetsWidget />
