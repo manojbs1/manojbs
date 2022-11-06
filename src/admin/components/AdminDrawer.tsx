@@ -33,29 +33,9 @@ export const menuItems = [
     path: "/admin",
   },
   {
-    icon: BarChartIcon,
-    key: "admin.drawer.menu.dashboard",
-    path: "/admin/dashboard",
-  },
-  {
-    icon: PeopleIcon,
-    key: "admin.drawer.menu.userManagement",
-    path: "/admin/user-management",
-  },
-  {
-    icon: EventIcon,
-    key: "admin.drawer.menu.calendar",
-    path: "/admin/calendar",
-  },
-  {
     icon: AccountTreeIcon,
     key: "admin.drawer.menu.projects",
     path: "/admin/projects",
-  },
-  {
-    icon: HelpCenterIcon,
-    key: "admin.drawer.menu.help",
-    path: "/admin/help",
   },
 ];
 

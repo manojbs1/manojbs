@@ -21,7 +21,15 @@ const profileMenuItems = [
   {
     key: "profile.menu.activity",
     path: "",
-  }
+  },
+  {
+    key: "profile.menu.info",
+    path: "./information",
+  },
+  {
+    key: "profile.menu.password",
+    path: "./password",
+  },
 ];
 
 const Profile = () => {
